@@ -1,0 +1,26 @@
+/**
+ * http://codepen.io/nicksen/pen/qFbno
+ */
+@footerHeight: 60px;
+@footerMargin: 20px;
+
+html {
+    position: relative;
+    min-height: 100%;
+    /* IE Fix */
+    height: auto !important;
+    height: 100%;
+}
+
+body {
+    margin: 0 auto (@footerHeight + @footerMargin);
+}
+
+footer.sticky {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: @footerHeight;
+    margin-top: @footerMargin;
+    width: 100%;
+}

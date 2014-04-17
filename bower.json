@@ -1,0 +1,28 @@
+{
+  "name": "metrics",
+  "version": "0.0.1",
+  "authors": [
+    "Nicklas Moberg <nicklas@nicks.se>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "amplify": "~1.1.2",
+    "bootstrap": "~3.1.1",
+    "console-polyfill": "~0.1.1",
+    "es5-shim": "~2.3.0",
+    "json3": "~3.3.1",
+    "react": "~0.10.0",
+    "react-bootstrap": "~0.9.0",
+    "superagent": "~0.17.0"
+  }
+}
