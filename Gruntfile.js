@@ -77,6 +77,8 @@ module.exports = function (grunt) {
                     }
                 ]
             },
+
+            // App templates (HTML) from `client`
             templates: {
                 files: [
                     {
@@ -171,10 +173,22 @@ module.exports = function (grunt) {
     grunt.registerTask("build", [ "clean:build", "copy", "less", "concat:vendor", "jshint", "browserify" ]);
 
     // Optimize build
-    grunt.registerTask("optimize", [ "useminPrepare", "concat", "cssmin", "uglify", "imagemin", "clean:generated", "usemin", "clean:tmp" ]);
+    grunt.registerTask("optimize", [
+        "useminPrepare",
+        "concat",
+        "cssmin",
+        "uglify",
+        "imagemin",
+        "clean:generated",
+        "usemin",
+        "clean:tmp"
+    ]);
 
-    // Default task (develop)
-    grunt.registerTask("default", [ "build", "watch" ]);
+    // Developer mode
+    grunt.registerTask("develop", [ "build", "watch" ]);
+
+    // Calling `grunt` without argument triggers `develop`
+    grunt.registerTask("default", [ "develop" ]);
 
     // Autoload grunt tasks
     require("load-grunt-tasks")(grunt);
